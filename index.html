@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando números</title>
+</head>
+<body>
+    <header><h1>Somando Números</h1></header>
+    <p>Em cada caixa escolha/escreva um número</p>
+    <div>
+        <input type="number" id="txtn1" name="txtn1"> +
+        <input type="number" id="txtn2" name="txtn2">
+        <input type="button" value="Calcular" onclick="clicar()">
+    </div>
+    <div id="res">
+        Aqui vai o resultado
+    </div>
+    <script>
+        function clicar(){
+            let n1 = Number(document.getElementById('txtn1').value)
+            let n2 = Number(document.getElementById('txtn2').value)
+            let s = n1 + n2
+            let res = document.getElementById('res')
+            res.innerHTML = `O resultado da soma é ${s}`
+        }
+    </script>
+</body>
+</html>
